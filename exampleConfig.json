@@ -1,0 +1,17 @@
+{
+  "token": "YOUR_TOKEN_HERE",
+  "progressCharSet": {
+    "prefix": "[",
+    "fullSet": "#",
+    "fullMid": "#",
+    "fullEnd": "#",
+    "lastSet": "%",
+    "lastMid": "%",
+    "lastEnd": "%",
+    "emptySet": " ",
+    "emptyMid": " ",
+    "emptyEnd": " ",
+    "suffix": "]"
+  },
+  "blacklist": []
+}

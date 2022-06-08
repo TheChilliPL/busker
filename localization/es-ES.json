@@ -1,0 +1,110 @@
+{
+    "messages": {
+        "search": {
+            "not_found": "$[emoji.warning] No se ha podido encontrar ningun resultado de tu búsqueda."
+        },
+        "queue": {
+            "added": "$[emoji.note] Se ha añadido la pista **${TRACK}** de **${AUTHOR}** a la cola!",
+            "playlist_added": "$[emoji.note] Se ha añadido `${COUNT}` pistas de la lista **${PLAYLIST}**",
+            "new_track": "$[emoji.note] Reproduciendo **$${TRACK}** (${DURATION}) de **${AUTHOR}**!",
+            "end": "$[emoji.stop] Se ha acabado reproducir la cola. Puedes poner algo más usando `/poner/`!",
+            "stopped": "$[emoji.stop] Se ha terminado reproducir la cola.",
+            "channel_empty": "$[emoji.stop] Todos han salido del canal de voz, se ha acabado reproducir."
+        },
+        "now_playing": "$[emoji.note] Reproduciendo **${TRACK}** de **${AUTHOR}**!",
+        "not_playing": "$[emoji.warning] No se reproduce ningún pista ahora. Puedes poner algo usando `/poner`.",
+        "paused": "$[emoji.pause] Se ha pausado la reproducción.",
+        "resumed": "$[emoji.play] Se ha reanudado la reproducción.",
+        "skipped": {
+            "one": "$[emoji.skip] Se ha saltado la pista en reproducción.",
+            "some": "$[emoji.skip] Se ha saltado ${AMOUNT} pistas.",
+            "all": "$[emoji.skip] Se ha saltado todas las ${AMOUNT} pistas. Se ha acabado la reproducción."
+        },
+        "no_vc": "$[emoji.warning] Para poner música, debes estar en un canal de voz.",
+        "open_in_browser": "Abrir en navegador",
+        "loop_mode": {
+            "off": "$[emoji.loop_off] Se ha desactivado la repetición.",
+            "one": "$[emoji.loop_one] Se ha activado la repetición de pista.",
+            "many": "$[emoji.loop_many] Se ha activado la repetición de lista.",
+            "auto": "$[emoji.loop_auto] Se ha activado la autorreproducción."
+        },
+        "invalid_timestamp": "$[emoji.warning] La marca de tiempo es incorrecta.",
+        "seeked": "$[emoji.seek] Se ha desplazado al momento dado.",
+        "shuffled": "$[emoji.shuffle] Se ha mezclado la cola.",
+        "not_enough_in_queue": "$[emoji.warning] No hay bastantes pistas en la cola.",
+        "blacklist": "$[emoji.warning] No se puede añadir esta pista, porque está en la lista negra."
+    },
+    "now_playing": {
+        "by": "por **${AUTHOR}**",
+        "queue_length": "Hay ${COUNT} pistas en la cola.",
+        "requested_by": "Añadido por ${USERNAME}"
+    },
+    "commands": {
+        "play": {
+            "name": "poner",
+            "description": "Reproduce la pista o lista de reproducción dada.",
+            "options": {
+                "query": {
+                    "name": "frase",
+                    "description": "Una frase de búsqueda o un enlace de una pista o lista."
+                }
+            }
+        },
+        "np": {
+            "name": "np",
+            "description": "Enseña la pista actualmente en reproducción."
+        },
+        "pause": {
+            "name": "pausar",
+            "description": "Pausa la cola en reproducción."
+        },
+        "resume": {
+            "name": "reanudar",
+            "description": "Reanuda la reproducción."
+        },
+        "skip": {
+            "name": "saltar",
+            "description": "Salta la pista en reproducción en la cola.",
+            "options": {
+                "amount": {
+                    "name": "cantidad",
+                    "description": "Cuantos pistas saltar."
+                }
+            }
+        },
+        "stop": {
+            "name": "terminar",
+            "description": "Termina la reproducción, limpia la cola y desconecta el bot."
+        },
+        "loop": {
+            "name": "repetir",
+            "description": "Cambia el modo de repetir.",
+            "options": {
+                "mode": {
+                    "name": "modo",
+                    "description": "Modo de repetir.",
+                    "choices": {
+                        "off": "$[emoji.loop_off] Desactivado",
+                        "track": "$[emoji.loop_one] Repetir la pista",
+                        "queue": "$[emoji.loop_many] Repetir la cola",
+                        "autoplay": "$[emoji.loop_auto] Autorreproducción"
+                    }
+                }
+            }
+        },
+        "seek": {
+            "name": "desplazar",
+            "description": "Desplaza al tiempo dado en la pista en reproducción.",
+            "options": {
+                "timestamp": {
+                    "name": "tiempo",
+                    "description": "La marca de tiempo. Formato: `ss`/`mm:ss`/`hh:mm:ss`."
+                }
+            }
+        },
+        "shuffle": {
+            "name": "mezclar",
+            "description": "Mezcla el orden de todas las pistas en la cola."
+        }
+    }
+}

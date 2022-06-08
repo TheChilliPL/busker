@@ -1,0 +1,124 @@
+{
+    "emoji": {
+        "note": "\uD83C\uDFB5",
+        "play": "\u25B6\uFE0F",
+        "pause": "\u23F8\uFE0F",
+        "skip": "\u21AA\uFE0F",
+        "warning": "\u26A0\uFE0F",
+        "stop": "\u23F9\uFE0F",
+        "loop_off": "\uD83D\uDFE6",
+        "loop_one": "\uD83D\uDD02",
+        "loop_many": "\uD83D\uDD01",
+        "loop_auto": "\u267E\uFE0F",
+        "seek": "\u23E9",
+        "shuffle": "\uD83D\uDD00"
+    },
+    "messages": {
+        "search": {
+            "not_found": "$[emoji.warning] Couldn't find any music matching your search."
+        },
+        "queue": {
+            "added": "$[emoji.note] Added track **${TRACK}** by **${AUTHOR}** to the queue!",
+            "playlist_added": "$[emoji.note] Added `${COUNT}` tracks from the **${PLAYLIST}** playlist by **${AUTHOR}**!",
+            "new_track": "$[emoji.note] Playing **${TRACK}** (${DURATION}) by **${AUTHOR}**!",
+            "end": "$[emoji.stop] Finished playing the queue. You can play something new using `/play`!",
+            "stopped": "$[emoji.stop] Stopped playing the queue.",
+            "channel_empty": "$[emoji.stop] Everyone has left the voice channel, stopped playing."
+        },
+        "now_playing": "$[emoji.note] Playing **${TRACK}** by **${AUTHOR}**!",
+        "not_playing": "$[emoji.warning] No track is currently playing. You can start using the `/play` command.",
+        "paused": "$[emoji.pause] Paused playing.",
+        "resumed": "$[emoji.play] Resumed playing.",
+        "skipped": {
+            "one": "$[emoji.skip] Skipped current track.",
+            "some": "$[emoji.skip] Skipped ${AMOUNT} tracks.",
+            "all": "$[emoji.skip] Skipped all ${AMOUNT} tracks. Stopped playing the queue."
+        },
+        "no_vc": "$[emoji.warning] To play music, you have to be in a voice channel.",
+        "open_in_browser": "Open in browser",
+        "loop_mode": {
+            "off": "$[emoji.loop_off] Disabled looping.",
+            "one": "$[emoji.loop_one] Enabled track looping.",
+            "many": "$[emoji.loop_many] Enabled queue looping.",
+            "auto": "$[emoji.loop_auto] Enabled autoplay."
+        },
+        "invalid_timestamp": "$[emoji.warning] The given timestamp is incorrect.",
+        "seeked": "$[emoji.seek] Seeked to the specified moment.",
+        "shuffled": "$[emoji.shuffle] Shuffled the queue.",
+        "not_enough_in_queue": "$[emoji.warning] There aren't enough tracks in the queue.",
+        "blacklist": "$[emoji.warning] You cannot add this track, because it's on the blacklist."
+    },
+    "now_playing": {
+        "by": "by **${AUTHOR}**",
+        "queue_length": "Tracks in the queue: ${COUNT}",
+        "requested_by": "Requested by ${USERNAME}"
+    },
+    "commands": {
+        "play": {
+            "name": "play",
+            "description": "Plays the specified track or playlist.",
+            "options": {
+                "query": {
+                    "name": "query",
+                    "description": "Your search query or a link to the track or playlist."
+                }
+            }
+        },
+        "np": {
+            "name": "np",
+            "description": "Shows what track is now playing."
+        },
+        "pause": {
+            "name": "pause",
+            "description": "Pauses the queue."
+        },
+        "resume": {
+            "name": "resume",
+            "description": "Resumes playing the queue."
+        },
+        "skip": {
+            "name": "skip",
+            "description": "Skips the currently playing track.",
+            "options": {
+                "amount": {
+                    "name": "amount",
+                    "description": "How many tracks to skip."
+                }
+            }
+        },
+        "stop": {
+            "name": "stop",
+            "description": "Stops playing, clears the queue, and disconnects the bot."
+        },
+        "loop": {
+            "name": "loop",
+            "description": "Changes the loop mode.",
+            "options": {
+                "mode": {
+                    "name": "mode",
+                    "description": "Loop mode.",
+                    "choices": {
+                        "off": "$[emoji.loop_off] Disabled",
+                        "track": "$[emoji.loop_one] Loop track",
+                        "queue": "$[emoji.loop_many] Loop queue",
+                        "autoplay": "$[emoji.loop_auto] Autoplay"
+                    }
+                }
+            }
+        },
+        "seek": {
+            "name": "seek",
+            "description": "Seeks to the specified fragment in the current track.",
+            "options": {
+                "timestamp": {
+                    "name": "timestamp",
+                    "description": "The timestamp. Format: `ss`/`mm:ss`/`hh:mm:ss`."
+                }
+            }
+        },
+        "shuffle": {
+            "name": "shuffle",
+            "description": "Shuffles the order of all the tracks in the queue."
+        }
+    }
+}

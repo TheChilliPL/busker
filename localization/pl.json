@@ -1,0 +1,110 @@
+{
+    "messages": {
+        "search":{
+            "not_found": "$[emoji.warning] Nie znaleziono muzyki pasującej do twojej frazy wyszukiwania."
+        },
+        "queue": {
+            "added": "$[emoji.note] Dodano do kolejki **${TRACK}** w wykonaniu **${AUTHOR}**!",
+            "playlist_added": "$[emoji.note] Dodano do kolejki `${COUNT}` utworów z playlisty **${PLAYLIST}** w wykonaniu **${AUTHOR}**!",
+            "new_track": "$[emoji.note] Odtwarzanie **${TRACK}** (${DURATION}) w wykonaniu **${AUTHOR}**!",
+            "end": "$[emoji.stop] Zakończono odtwarzanie kolejki. Możesz odtworzyć coś nowego komendą `/odtwórz`!",
+            "stopped": "$[emoji.stop] Zatrzymano odtwarzanie kolejki.",
+            "channel_empty": "$[emoji.stop] Wszyscy opuścili kanał głosowy, zatrzymano odtwarzanie."
+        },
+        "now_playing": "$[emoji.note] Odtwarzanie **${TRACK}** w wykonaniu **${AUTHOR}**!",
+        "not_playing": "$[emoji.warning] Obecnie nie jest odtwarzany żaden utwór. Możesz zacząć, wykorzystując polecenie `/odtwórz`.",
+        "paused": "$[emoji.pause] Wstrzymano odtwarzanie.",
+        "resumed": "$[emoji.play] Odnowiono odtwarzanie.",
+        "skipped": {
+            "one": "$[emoji.skip] Pominięto obecny utwór.",
+            "some": "$[emoji.skip] Pominięto utworów: ${AMOUNT}.",
+            "all": "$[emoji.skip] Pominięto wszystkie utwory. Zatrzymano odtwarzanie kolejki."
+        },
+        "no_vc": "$[emoji.warning] Aby odtwarzać muzykę, musisz znajdować się na kanale głosowym.",
+        "open_in_browser": "Odtwórz w przeglądarce",
+        "loop_mode": {
+            "off": "$[emoji.loop_off] Wyłączono powtarzanie.",
+            "one": "$[emoji.loop_one] Włączono powtarzanie ścieżki.",
+            "many": "$[emoji.loop_many] Włączono powtarzanie kolejki.",
+            "auto": "$[emoji.loop_auto] Włączono autoodtwarzanie."
+        },
+        "invalid_timestamp": "$[emoji.warning] Podano nieprawidłowy czas.",
+        "seeked": "$[emoji.seek] Przewinięto do podanego momentu.",
+        "shuffled": "$[emoji.shuffle] Pomieszano kolejność kolejki.",
+        "not_enough_in_queue": "$[emoji.warning] Nie ma wystarczająco dużo utworów w kolejce.",
+        "blacklist": "$[emoji.warning] Nie można dodać utworu, ponieważ znajduje się on na czarnej liście."
+    },
+    "now_playing": {
+        "by": "autorstwa **${AUTHOR}**",
+        "queue_length": "Utworów w kolejce: ${COUNT}",
+        "requested_by": "Dodane przez ${USERNAME}"
+    },
+    "commands": {
+        "play": {
+            "name": "odtwórz",
+            "description": "Odtwarza podany utwór bądź playlistę.",
+            "options": {
+                "query": {
+                    "name": "fraza",
+                    "description": "Utwór do wyszukania lub link do utworu bądź playlisty."
+                }
+            }
+        },
+        "np": {
+            "name": "np",
+            "description": "Wyświetla obecnie odtwarzany utwór."
+        },
+        "pause": {
+            "name": "pauzuj",
+            "description": "Pauzuje obecną kolejkę."
+        },
+        "resume": {
+            "name": "wznów",
+            "description": "Odnawia odtwarzanie obecnej kolejki."
+        },
+        "skip": {
+            "name": "pomiń",
+            "description": "Pomija obecny utwór w kolejce.",
+            "options": {
+                "amount": {
+                    "name": "ilość",
+                    "description": "Ile utworów pominąć."
+                }
+            }
+        },
+        "stop": {
+            "name": "stop",
+            "description": "Zatrzymuje odtwarzanie, czyści kolejkę i rozłącza bota."
+        },
+        "loop": {
+            "name": "pętla",
+            "description": "Zmienia tryb powtarzania.",
+            "options": {
+                "mode": {
+                    "name": "tryb",
+                    "description": "Tryb powtarzania.",
+                    "choices": {
+                        "off": "$[emoji.loop_off] Wyłączone",
+                        "track": "$[emoji.loop_one] Powtarzanie ścieżki",
+                        "queue": "$[emoji.loop_many] Powtarzanie kolejki",
+                        "autoplay": "$[emoji.loop_auto] Autoodtwarzanie"
+                    }
+                }
+            }
+        },
+        "seek": {
+            "name": "przewiń",
+            "description": "Przewija do określonego fragmentu w obecnym utworze.",
+            "options": {
+                "timestamp": {
+                    "name": "czas",
+                    "description": "Czas. Format: `ss`/`mm:ss`/`hh:mm:ss`."
+                }
+            }
+        },
+        "shuffle": {
+            "name": "tasuj",
+            "description": "Losuje kolejność wszystkich ścieżek na liście odtwarzania."
+        }
+    }
+}
