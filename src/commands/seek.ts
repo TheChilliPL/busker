@@ -3,7 +3,7 @@ import {getLocaleFor, getString} from "../localization";
 
 export async function initSeek() {
     client.on("interactionCreate", async interaction => {
-        if (!interaction.isCommand()) return;
+        if (!interaction.isChatInputCommand()) return;
         if (interaction.commandName != "seek") return;
 
         let queue = player.getQueue(interaction.guild!);

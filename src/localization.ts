@@ -132,7 +132,7 @@ export function getLocaleFor(something: any): string | undefined {
     if(something instanceof Discord.Guild) {
         return something.preferredLocale;
     }
-    if(something instanceof Discord.Interaction) {
+    if(something instanceof Discord.BaseInteraction) {
         return something.locale;
     }
     if(something instanceof Queue) {

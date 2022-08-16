@@ -21,7 +21,7 @@ export async function registerCommands(guild?: Discord.Snowflake) {
             ...localizeObject("commands.play"),
             options: [
                 {
-                    type: "STRING",
+                    type: Discord.ApplicationCommandOptionType.String,
                     name: "query",
                     required: true,
                     ...localizeObject("commands.play.options.query"),
@@ -46,7 +46,7 @@ export async function registerCommands(guild?: Discord.Snowflake) {
             ...localizeObject("commands.skip"),
             options: [
                 {
-                    type: "INTEGER",
+                    type: Discord.ApplicationCommandOptionType.Integer,
                     name: "amount",
                     ...localizeObject("commands.skip.options.amount"),
                     minValue: 1
@@ -62,7 +62,7 @@ export async function registerCommands(guild?: Discord.Snowflake) {
             ...localizeObject("commands.loop"),
             options: [
                 {
-                    type: "STRING",
+                    type: Discord.ApplicationCommandOptionType.String,
                     name: "mode",
                     required: true,
                     ...localizeObject("commands.loop.options.mode"),
@@ -91,7 +91,7 @@ export async function registerCommands(guild?: Discord.Snowflake) {
             name: "seek",
             ...localizeObject("commands.seek"),
             options: [{
-                type: "STRING",
+                type: Discord.ApplicationCommandOptionType.String,
                 name: "timestamp",
                 ...localizeObject("commands.seek.options.timestamp"),
                 required: true

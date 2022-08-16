@@ -4,7 +4,7 @@ import {getLocaleFor, getString} from "../localization";
 
 export async function initLoop() {
     client.on("interactionCreate", async interaction => {
-        if (!interaction.isCommand()) return;
+        if (!interaction.isChatInputCommand()) return;
         if (interaction.commandName != "loop") return;
 
         let queue = player.getQueue(interaction.guild!);

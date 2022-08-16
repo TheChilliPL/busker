@@ -65,8 +65,8 @@ async function init() {
 
     client = new Discord.Client({
         intents: [
-            "GUILDS",
-            "GUILD_VOICE_STATES"
+            Discord.IntentsBitField.Flags.Guilds,
+            Discord.IntentsBitField.Flags.GuildVoiceStates
         ]
     });
 

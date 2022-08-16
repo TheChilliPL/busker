@@ -6,7 +6,7 @@ import {getLocaleFor, getString} from "../localization";
 
 export async function initPlay() {
     client.on("interactionCreate", async interaction => {
-        if(!interaction.isCommand()) return;
+        if(!interaction.isChatInputCommand()) return;
         if(interaction.commandName != "play") return;
 
         await interaction.deferReply();
@@ -63,11 +63,11 @@ export async function initPlay() {
                     COUNT: search.playlist.tracks.length.toString()
                 }}),
                 components: [{
-                    type: "ACTION_ROW",
+                    type: Discord.ComponentType.ActionRow,
                     components: [{
-                        type: "BUTTON",
-                        label: getString("messages.open_in_browser", getLocaleFor(interaction)),
-                        style: "LINK",
+                        type: Discord.ComponentType.Button,
+                        label: getString("messages.open_in_browser", getLocaleFor(interaction))!,
+                        style: Discord.ButtonStyle.Link,
                         url: search.playlist.url
                     }]
                 }]
@@ -82,11 +82,11 @@ export async function initPlay() {
                     AUTHOR: search.tracks[0].author
                 }}),
                 components: [{
-                    type: "ACTION_ROW",
+                    type: Discord.ComponentType.ActionRow,
                     components: [{
-                        type: "BUTTON",
-                        label: getString("messages.open_in_browser", getLocaleFor(interaction)),
-                        style: "LINK",
+                        type: Discord.ComponentType.Button,
+                        label: getString("messages.open_in_browser", getLocaleFor(interaction))!,
+                        style: Discord.ButtonStyle.Link,
                         url: search.tracks[0].url
                     }]
                 }]

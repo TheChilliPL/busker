@@ -3,7 +3,7 @@ import {getLocaleFor, getString} from "../localization";
 
 export function initSkip() {
     client.on("interactionCreate", async interaction => {
-        if (!interaction.isCommand()) return;
+        if (!interaction.isChatInputCommand()) return;
         if (interaction.commandName != "skip") return;
 
         let queue = player.getQueue(interaction.guild!);
