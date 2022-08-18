@@ -69,7 +69,6 @@ export async function getStatusChannel(argument: Queue | Discord.Guild): Promise
     let voiceChannel = queue.connection.channel;
     if(
         voiceChannel instanceof VoiceChannel
-        && guild.features.includes("TEXT_IN_VOICE_ENABLED" as Discord.GuildFeature)
         && voiceChannel.permissionsFor(client.user)?.has(Discord.PermissionsBitField.Flags.SendMessages)
     )
         return voiceChannel;
