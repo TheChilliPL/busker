@@ -104,7 +104,21 @@
         },
         "shuffle": {
             "name": "tasuj",
-            "description": "Losuje kolejność wszystkich ścieżek na liście odtwarzania."
+            "description": "Losuje kolejność wszystkich ścieżek na liście odtwarzania.",
+            "options": {
+                "reshuffle_current": {
+                    "name": "tasuj_obecny",
+                    "description": "Tasuje obecny utwór wraz z kolejką."
+                },
+                "algorithm": {
+                    "name": "algorytm",
+                    "description": "Zmienia algorytm używany do potasowania kolejki.",
+                    "choices": {
+                        "fisher_yates": "Fisher–Yates (w pełni losowy)",
+                        "dithering": "Dithering (rozproszony, domyślny)"
+                    }
+                }
+            }
         }
     }
 }

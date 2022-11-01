@@ -104,7 +104,21 @@
         },
         "shuffle": {
             "name": "mezclar",
-            "description": "Mezcla el orden de todas las pistas en la cola."
+            "description": "Mezcla el orden de todas las pistas en la cola.",
+            "options": {
+                "reshuffle_current": {
+                    "name": "remezclar_actual",
+                    "description": "Remezcla la pista en reproducción a la cola."
+                },
+                "algorithm": {
+                    "name": "algoritmo",
+                    "description": "Especifica el algoritmo usado para mezclar la cola.",
+                    "choices": {
+                        "fisher_yates": "Fisher–Yates (completamente aleatorio)",
+                        "dithering": "Tramado (esparcido, por defecto)"
+                    }
+                }
+            }
         }
     }
 }

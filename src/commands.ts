@@ -99,7 +99,29 @@ export async function registerCommands(guild?: Discord.Snowflake) {
         },
         {
             name: "shuffle",
-            ...localizeObject("commands.shuffle")
+            ...localizeObject("commands.shuffle"),
+            options: [
+                {
+                    type: Discord.ApplicationCommandOptionType.Boolean,
+                    name: "reshuffle_current",
+                    ...localizeObject("commands.shuffle.options.reshuffle_current")
+                },
+                {
+                    type: Discord.ApplicationCommandOptionType.String,
+                    name: "algorithm",
+                    ...localizeObject("commands.shuffle.options.algorithm"),
+                    choices: [
+                        {
+                            ...localizeChoice("commands.shuffle.options.algorithm.choices.fisher_yates"),
+                            value: "fisher_yates"
+                        },
+                        {
+                            ...localizeChoice("commands.shuffle.options.algorithm.choices.dithering"),
+                            value: "dithering"
+                        }
+                    ]
+                }
+            ]
         }
     ];
 

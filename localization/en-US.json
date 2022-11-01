@@ -118,7 +118,21 @@
         },
         "shuffle": {
             "name": "shuffle",
-            "description": "Shuffles the order of all the tracks in the queue."
+            "description": "Shuffles the order of all the tracks in the queue.",
+            "options": {
+                "reshuffle_current": {
+                    "name": "reshuffle_current",
+                    "description": "Reshuffles the current track back into the queue."
+                },
+                "algorithm": {
+                    "name": "algorithm",
+                    "description": "Specifies the algorithm used to shuffle the queue.",
+                    "choices": {
+                        "fisher_yates": "Fisher–Yates (fully random)",
+                        "dithering": "Dithering (spread out, default)"
+                    }
+                }
+            }
         }
     }
 }
