@@ -2,6 +2,7 @@ import * as fs from "fs/promises";
 import * as Utils from "./utils";
 import * as Discord from "discord.js";
 import {Queue} from "discord-player";
+import {getCommandId} from "./commands";
 
 export interface LocaleInfo {
     name: string
@@ -33,8 +34,19 @@ export function processString(str: string, localeId?: string, placeholders?: Rec
             return getString(key, localeId, {placeholders, fallback: true});
         }
     ).replace(
-        /\$\{([._\-\w]+)}/g,
-        (str, key) => {
+        /\$\{(\/?[._\-\w]+)}/g,
+        (str, _key) => {
+            let key = _key as string;
+            if(key.startsWith("/")) {
+                // Command formatting
+                let commandName = key.substring(1);
+                let commandId = getCommandId(commandName);
+                if(!commandId) {
+                    console.warn(`Command ${commandName} requested by localization file not found.`);
+                    commandId = "0";
+                }
+                return `</${commandName}:${commandId}>`;
+            }
             return placeholders?.[key] ?? str;
         }
     );

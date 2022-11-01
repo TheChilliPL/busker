@@ -9,8 +9,6 @@ export async function initPlay() {
         if(!interaction.isChatInputCommand()) return;
         if(interaction.commandName != "play") return;
 
-        await interaction.deferReply();
-
         let query = interaction.options.getString("query", true);
 
         let search = await player.search(query, {
@@ -18,19 +16,19 @@ export async function initPlay() {
         });
 
         if(search.tracks.length <= 0) {
-            await interaction.editReply(getString("messages.search.not_found", getLocaleFor(interaction))!);
+            await interaction.reply(getString("messages.search.not_found", getLocaleFor(interaction))!);
             return;
         }
 
         if(violatesBlacklist(search.tracks[0]?.title)) {
-            await interaction.editReply(getString("messages.blacklist", getLocaleFor(interaction))!);
+            await interaction.reply(getString("messages.blacklist", getLocaleFor(interaction))!);
             return;
         }
 
         let member = interaction.member as Discord.GuildMember;
 
         if(!member.voice.channel) {
-            await interaction.editReply(getString("messages.no_vc", getLocaleFor(interaction))!);
+            await interaction.reply(getString("messages.no_vc", getLocaleFor(interaction))!);
             return;
         }
 
@@ -56,7 +54,7 @@ export async function initPlay() {
             await queue.addTracks(search.playlist.tracks);
             if(!queue.playing) await queue.play();
 
-            await interaction.editReply({
+            await interaction.reply({
                 content: getString("messages.queue.playlist_added", getLocaleFor(interaction), { placeholders: {
                     PLAYLIST: search.playlist.title,
                     AUTHOR: search.playlist.author.name,
@@ -76,7 +74,7 @@ export async function initPlay() {
             queue.addTrack(search.tracks[0]);
             if(!queue.playing) await queue.play();
 
-            await interaction.editReply({
+            await interaction.reply({
                 content: getString("messages.queue.added", getLocaleFor(interaction), { placeholders: {
                     TRACK: search.tracks[0].title,
                     AUTHOR: search.tracks[0].author

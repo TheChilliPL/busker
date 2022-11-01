@@ -7,12 +7,12 @@
             "added": "$[emoji.note] Dodano do kolejki **${TRACK}** w wykonaniu **${AUTHOR}**!",
             "playlist_added": "$[emoji.note] Dodano do kolejki `${COUNT}` utworów z playlisty **${PLAYLIST}** w wykonaniu **${AUTHOR}**!",
             "new_track": "$[emoji.note] Odtwarzanie **${TRACK}** (${DURATION}) w wykonaniu **${AUTHOR}**!",
-            "end": "$[emoji.stop] Zakończono odtwarzanie kolejki. Możesz odtworzyć coś nowego komendą `/odtwórz`!",
+            "end": "$[emoji.stop] Zakończono odtwarzanie kolejki. Możesz odtworzyć coś nowego komendą ${/play}!",
             "stopped": "$[emoji.stop] Zatrzymano odtwarzanie kolejki.",
             "channel_empty": "$[emoji.stop] Wszyscy opuścili kanał głosowy, zatrzymano odtwarzanie."
         },
         "now_playing": "$[emoji.note] Odtwarzanie **${TRACK}** w wykonaniu **${AUTHOR}**!",
-        "not_playing": "$[emoji.warning] Obecnie nie jest odtwarzany żaden utwór. Możesz zacząć, wykorzystując polecenie `/odtwórz`.",
+        "not_playing": "$[emoji.warning] Obecnie nie jest odtwarzany żaden utwór. Możesz zacząć, wykorzystując polecenie ${/play}.",
         "paused": "$[emoji.pause] Wstrzymano odtwarzanie.",
         "resumed": "$[emoji.play] Odnowiono odtwarzanie.",
         "skipped": {

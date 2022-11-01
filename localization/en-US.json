@@ -21,12 +21,12 @@
             "added": "$[emoji.note] Added track **${TRACK}** by **${AUTHOR}** to the queue!",
             "playlist_added": "$[emoji.note] Added `${COUNT}` tracks from the **${PLAYLIST}** playlist by **${AUTHOR}**!",
             "new_track": "$[emoji.note] Playing **${TRACK}** (${DURATION}) by **${AUTHOR}**!",
-            "end": "$[emoji.stop] Finished playing the queue. You can play something new using `/play`!",
+            "end": "$[emoji.stop] Finished playing the queue. You can play something new using ${/play}!",
             "stopped": "$[emoji.stop] Stopped playing the queue.",
             "channel_empty": "$[emoji.stop] Everyone has left the voice channel, stopped playing."
         },
         "now_playing": "$[emoji.note] Playing **${TRACK}** by **${AUTHOR}**!",
-        "not_playing": "$[emoji.warning] No track is currently playing. You can start using the `/play` command.",
+        "not_playing": "$[emoji.warning] No track is currently playing. You can start using the ${/play} command.",
         "paused": "$[emoji.pause] Paused playing.",
         "resumed": "$[emoji.play] Resumed playing.",
         "skipped": {

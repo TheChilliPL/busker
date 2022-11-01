@@ -140,7 +140,16 @@ export async function removeCommands(guild?: Discord.Snowflake) {
     }
 }
 
+export function getCommandId(name: string, guild?: Discord.Snowflake): Discord.Snowflake | null {
+    const commandsCache = client.application.commands.cache;
+    const command = commandsCache.find(c => c.guildId == guild && c.name == name);
+    if (!command) return null;
+    return command.id;
+}
+
 export async function addCommandListeners() {
+    await client.application.commands.fetch();
+
     await initPlay();
     await initNp();
     await initPause();
