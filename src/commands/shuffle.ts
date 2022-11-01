@@ -10,7 +10,7 @@ export async function initShuffle() {
         let queue = player.getQueue(interaction.guild!);
 
         if(!queue) {
-            await interaction.reply(getString("messages.invalid_timestamp", getLocaleFor(interaction))!);
+            await interaction.reply({content: getString("messages.not_playing", getLocaleFor(interaction))});
             return;
         }
 
