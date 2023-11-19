@@ -1,0 +1,10 @@
+{
+  "name": "busker",
+  "version": "0.2.0",
+  "description": "A simple, yet powerful music bot for Discord.",
+  "scripts": {
+    "start": "npx tsx src/index.ts"
+  },
+  "author": "TheChilliPL <chilli@thechilli.dev>",
+  "license": "MPL-2.0"
+}
